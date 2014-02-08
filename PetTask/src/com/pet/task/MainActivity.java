@@ -8,6 +8,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.BitmapFactory.Options;
 import android.graphics.Matrix;
+import android.graphics.drawable.AnimationDrawable;
 import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.ViewGroup;
@@ -37,9 +38,13 @@ public class MainActivity extends Activity {
 	{
 		//Placeholder for animated animal
 		ImageView image = (ImageView)findViewById(R.id.pet_main);
-		image.setImageResource(R.drawable.placeholder);
-		//Matrix matrix = new Matrix();
-		//image.setImageMatrix(matrix);
+		image.setImageResource(R.drawable.pet_test);
+
+		 // Get the background, which has been compiled to an AnimationDrawable object.
+		 AnimationDrawable frameAnimation = (AnimationDrawable) image.getDrawable();
+
+		 // Start the animation (looped playback by default).
+		 frameAnimation.start();
 		
 		//ListView
 		ListView list = (ListView)findViewById(R.id.todo_main);
