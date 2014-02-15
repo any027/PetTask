@@ -11,10 +11,13 @@ import android.graphics.Matrix;
 import android.graphics.drawable.AnimationDrawable;
 import android.util.DisplayMetrics;
 import android.view.Menu;
+import android.view.MotionEvent;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.graphics.*;
 
 public class MainActivity extends Activity {
 	public static int screenW, screenH;
@@ -39,12 +42,27 @@ public class MainActivity extends Activity {
 		//Placeholder for animated animal
 		ImageView image = (ImageView)findViewById(R.id.pet_main);
 		image.setImageResource(R.drawable.pet_test);
-
+		
 		 // Get the background, which has been compiled to an AnimationDrawable object.
-		 AnimationDrawable frameAnimation = (AnimationDrawable) image.getDrawable();
-
+		 final AnimationDrawable frameAnimation = (AnimationDrawable) image.getDrawable();
 		 // Start the animation (looped playback by default).
 		 frameAnimation.start();
+		 
+		 image.setOnTouchListener(new View.OnTouchListener() {
+
+			@Override
+			public boolean onTouch(View v, MotionEvent event) {
+				// TODO Auto-generated method stub
+				if(frameAnimation.isRunning())
+					frameAnimation.stop();
+				else
+				{
+					frameAnimation.setColorFilter(R.color.Bisque, PorterDuff.Mode.MULTIPLY);
+					frameAnimation.start();
+				}
+				return false;
+			}
+		});
 		
 		//ListView
 		ListView list = (ListView)findViewById(R.id.todo_main);
