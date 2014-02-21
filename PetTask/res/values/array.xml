@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="messages">
+        <item> "Hello" </item>
+        <item> "Let's get to work!" </item>
+        <item> "Heyy there, gurlfrand ;)" </item>
+        <item> "Never give up!" </item>
+        <item> "You can do it!" </item> 
+        <item> "You look gorgeous in that top" </item>
+        <item> "Let's get down to business." </item>
+        <item> "The Mitochondria is the Powerhouse of the cell!" </item>
+        <item> "WHAT TEAM!?" </item>
+    </string-array>
+</resources>
