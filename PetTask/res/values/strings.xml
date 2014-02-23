@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">PetTask</string>
+    <string name="app_name">Test</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="yolo">Bitches aint shit but hoes and tricks</string>
+    <string name="cookies">Bake Cookies</string>
+    <string name="time">9:30</string>
 
 </resources>
